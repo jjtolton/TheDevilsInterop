@@ -1,0 +1,32 @@
+* The Devil's Interop
+
+  Direct Clojure interop from Python.
+
+  Cats and dogs living together.
+
+  Truly, it is the ~partial(api.callfn, "clojure.core/last")~ of days.
+  
+  #+BEGIN_SRC bash
+  git clone git@github.com:jjtolton/TheDevilsInterop
+  cd TheDevilsInterop
+  docker build -t metalinterop -f deployment/dockerfiles/Dockerfile .
+  docker run --rm -it metalinterop
+  #+END_SRC
+
+  #+BEGIN_SRC python
+  import metal.core as metal
+  import metal.api as api
+  from functools import partial
+  
+  api.callfn("clojure.core/first", [1, 2, 3])
+  #=> 1
+
+  api.callfn("clojure.core/rest", [1, 2, 3])
+  #=> [2, 3]
+
+  api.callfn("clojure.core/last", [1, 2, 3])
+  #=> 3
+
+  api.callfn("clojure.core/assoc", {"a": 1}, 2, 3)
+  #=> {'a': 1, '2': 3}
+  #+END_SRC
