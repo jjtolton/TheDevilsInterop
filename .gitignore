@@ -1,0 +1,16 @@
+/.cpcache/
+/.nrepl-port
+/classes/
+/gral
+/graal_isolate.h
+/graal_isolate_dynamic.h
+/graalvm
+/graalvm-ce-java11-21.0.0.2/
+/linux-install-1.10.3.1029.sh
+/target/
+/pom.xml
+/metal/libmetal.so
+/TheDevilsInterop/
+/dist/
+/metal.egg-info/
+/metal/__pycache__/*.pyc

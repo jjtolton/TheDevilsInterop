@@ -1,0 +1,27 @@
+{:paths ["src" "resources" "classes"]
+ :deps  {http-kit/http-kit              {:mvn/version "2.5.3"}
+         techascent/tech.ml.dataset     {:mvn/version "6.00-beta-16"}
+         techascent/tech.ml.dataset.sql {:mvn/version "6.00-beta-7"}
+         org.postgresql/postgresql      {:mvn/version "42.2.12"}
+         org.clojure/core.async         {:mvn/version "1.3.618"}
+         seancorfield/next.jdbc         {:mvn/version "1.2.659"}
+         org.clojure/data.csv           {:mvn/version "1.0.0"}
+         clj-python/libpython-clj       {:mvn/version "2.003"}
+         org.clojure/clojure {:mvn/version "1.10.3"}}
+ :aliases
+ {:standalone
+  {:replace-deps {com.github.seancorfield/depstar {:mvn/version "2.0.193"}}
+   :ns-default   hf.depstar
+   :exec-fn      hf.depstar/uberjar
+   :exec-args    {:group-id    "com.awesome.r0xx0r"
+                  :artifact-id "43"
+                  :version     "3.14"
+                  :sync-pom    true
+                  :aot         true
+                  :main-class  metal-interop.main
+                  :jar         "target/metal.jar"
+                  ;;Disable tensor code generation and ensure direct linking.
+                  :jvm-opts    ["-Dclojure.compiler.direct-linking=true"
+                                "-Dclojure.spec.skip-macros=true"
+                                "-Dtech.v3.datatype.graal-native=true"
+                                "-Dagentlib:native-image-agent=config-output-dir=.,config-write-period-secs=300,config-write-initial-delay-secs=5"]}}}}

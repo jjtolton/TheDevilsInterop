@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+env/bin/python -m pip install dist/*.whl --force-reinstall

@@ -1,0 +1,42 @@
+#!/bin/bash
+
+set -e
+
+source scripts/activate-graal
+
+echo "Building classes"
+clojure -m metal-interop.build
+
+echo "Building uberjar"
+clojure -X:standalone
+
+echo "Removing source files"
+
+# https://stackoverflow.com/questions/4520822/is-there-a-quick-way-to-delete-a-file-from-a-jar-war-without-having-to-extract
+zip -d target/metal.jar `unzip -lq target/metal.jar | egrep '.*[.]clj.?$' | awk '{print $4}'` || echo "No clojures/cript files found"
+zip -d target/metal.jar `unzip -lq target/metal.jar | egrep '.*[.]py$' | awk '{print $4}'` || echo "No Python files found"
+
+echo "Compiling Shared library"
+# -H:IncludeResources='public/.*' \
+# note: if resources stop being rendered, might have to include this back in
+#       Fri Jul  9 17:00:16 EDT 2021
+# -H:Log=registerResource:\   
+./graalvm/bin/native-image \
+    --report-unsupported-elements-at-runtime \
+    --initialize-at-build-time \
+    --no-fallback \
+    --no-server \
+    -H:+ReportExceptionStackTraces \
+    -H:ReflectionConfigurationFiles=scripts/reflection.json\
+    -H:ResourceConfigurationFiles=scripts/resource-config.json\
+    -H:IncludeResources='public/.*' \
+    -J-DLogback.configurationFile=public/logback.xml\
+    --initialize-at-run-time=org.postgresql.sspi.SSPIClient \
+    --initialize-at-run-time=org.httpkit.client.ClientSslEngineFactory\$SSLHolder \
+    --trace-object-instantiation=sun.security.provider.NativePRNG \
+    --allow-incomplete-classpath \
+    --enable-http --enable-https \
+    -J-Dclojure.spec.skip-macros=true \
+    -J-Dclojure.compiler.direct-linking=true \
+    -jar target/metal.jar -cp classes \
+    --shared -H:Name=target/libmetal

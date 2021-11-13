@@ -1,0 +1,21 @@
+{
+  "resources": {
+    "excludes": [
+      {
+        "pattern": ".*classes.*"
+      }
+    ],
+    "includes": [
+       
+      {
+        "pattern": "sql/.*[.]sql"
+      },
+      {
+        "pattern": "public/logback.xml"
+      },
+        {
+        "pattern": "metal/.*"
+        }
+    ]
+  }
+}

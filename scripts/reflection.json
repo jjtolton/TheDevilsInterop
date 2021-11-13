@@ -1,0 +1,176 @@
+[
+    {
+        "name": "java.io.File",
+        "allDeclaredConstructors": true,
+        "allPublicConstructors": true,
+        "allDeclaredMethods": true,
+        "allPublicMethods": true,
+        "allPublicFields": true
+    },
+    {
+        "allPublicConstructors": true,
+        "allPublicFields": true,
+        "allPublicMethods": true,
+        "name": "java.lang.AssertionError"
+    },
+    {
+        "name": "java.lang.Class",
+        "allDeclaredConstructors": true,
+        "allPublicConstructors": true,
+        "allDeclaredMethods": true,
+        "allPublicMethods": true
+    },
+    {
+        "name": "java.lang.Exception",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "clojure.lang.Delay",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "clojure.lang.ExceptionInfo",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "clojure.lang.LineNumberingPushbackReader",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.lang.String",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.io.StringReader",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.io.StringWriter",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.lang.Double",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.lang.Integer",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.lang.Number",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.lang.IllegalArgumentException",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.lang.System",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.util.Base64$Decoder",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.util.Base64$Encoder",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.lang.reflect.AccessibleObject",
+        "methods": [
+            {
+                "name": "canAccess"
+            }
+        ]
+    },
+    {
+        "name": "clojure.lang.RT",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.util.Arrays",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "org.postgresql.jdbc.PgConnection",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.sql.Timestamp",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+
+    {
+        "name": "java.lang.NullPointerException",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.lang.ClassNotFoundException",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.util.Date",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.lang.ClassCastException",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "java.io.ByteArrayOutputStream",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    },
+    {
+        "name": "org.postgresql.util.PSQLException",
+        "allPublicMethods": true,
+        "allPublicFields": true,
+        "allPublicConstructors": true
+    }
+]
